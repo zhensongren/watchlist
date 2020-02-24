@@ -19,6 +19,9 @@ movies = [
 def index():
     return render_template('index.html', name=name, movies=movies)
     
+@app.route('/hello')
+def hello():
+    return 'hello!'
 
 @app.route('/user/<name>')
 def user_page(name):
